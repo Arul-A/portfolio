@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header ul li{
+  @apply px-2
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-primary{
+  background-color: rgb(85, 81, 227);
+}
+.bg-secondary{
+  background-color: #2b2d77;
+}
+.mobile-nav{
+  @apply bg-gray-800 fixed h-1/3 w-full left-0 top-10
+}
+.mobile-nav li{
+  @apply border-b-2 text-center w-full h-full pt-3 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.project-desc{
+  @apply absolute left-0 bottom-0 right-0 top-0 bg-secondary opacity-0 duration-500 hover:opacity-100
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn{
+  @apply bg-primary px-5 py-2 font-bold rounded border-2 border-primary hover:border-white
 }
-
-.App-link {
-  color: #61dafb;
+html{
+  scroll-behavior: smooth;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.CircularProgressbar-path {
+  stroke: red;
+}
+.CircularProgressbar-trail {
+  stroke: gray;
+}
+.CircularProgressbar-text {
+  fill: yellow;
+}
+.CircularProgressbar-background {
+  fill: green;
 }
