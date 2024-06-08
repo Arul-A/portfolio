@@ -5,10 +5,10 @@ const Header = () => {
     const [toggle, setToggle] = useState(false)
     return (
         <header className='flex justify-between px-5 bg-primary font-bold py-2 sticky top-0 z-20'>
-            <a href='/'>A.Arul</a>
+            <a href='#home'>A.Arul</a>
             <nav className='hidden md:block'>
                 <ul className='flex text-white'>
-                    <li className='hover:bg-[#2b2d77]'><a href='/'>Home</a></li>
+                    <li className='hover:bg-[#2b2d77]'><a href='#home'>Home</a></li>
                     <li className='hover:bg-[#2b2d77]'><a href='#about'>About</a></li>
                     <li className='hover:bg-[#2b2d77]'><a href='#skills'>Skills</a></li>
                     <li className='hover:bg-[#2b2d77]'><a href='#experience'>Experience</a></li>
@@ -19,7 +19,7 @@ const Header = () => {
             </nav>
             {toggle &&<nav className='block md:hidden '>
                 <ul onClick={()=>setToggle(!toggle)} className='flex flex-col text-white mobile-nav'>
-                    <li><a href='/'>Home</a></li>
+                    <li><a href='#home'>Home</a></li>
                     <li><a href='#about'>About</a></li>
                     <li><a href='#skills'>Skills</a></li>
                     <li><a href='#experience'>Experience</a></li>

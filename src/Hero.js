@@ -13,7 +13,7 @@ const Hero = () => {
         subtitle: "I am a Front-end Web Developer"
     }
     return (
-        <section className='flex flex-col md:flex-row px-5 pt-32 pb-16 bg-primary justify-center items-center font-hero-font'>
+        <section id='home' className='flex flex-col md:flex-row px-5 pt-32 pb-16 bg-primary justify-center items-center font-hero-font'>
             <div className='md:w-1/2 text-white text-4xl'><h1>Hi, <br /> I am <span className='text-black font-bold'>Arul</span>
                 <p className='text-2xl'>{config.subtitle}</p>
             </h1>
