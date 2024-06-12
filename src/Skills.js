@@ -1,5 +1,7 @@
-import React from 'react'
-import ProgressBar from "@ramonak/react-progress-bar"
+import React from 'react';
+import ProgressBar from "@ramonak/react-progress-bar";
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 const Skills = () => {
   return (
@@ -9,64 +11,53 @@ const Skills = () => {
         <div className='flex justify-center mb-4'>
           <h3 className='text-3xl font-bold border-secondary border-b-4 w-[230px]'>Technical Skills</h3>
         </div>
-        <div className='flex flex-col space-y-4 text-xl'>
-          <div className='flex flex-col items-center'>
-            <p className='w-full  text-center mb-4'>HTML5</p>
-            <ProgressBar completed={90} bgColor='#DD4B25' animateOnRender={true} className='w-full md:w-3/4' />
-          </div>
-          <div className='flex flex-col items-center'>
-            <p className='w-full  text-center mb-4'>CSS3</p>
-            <ProgressBar completed={75} bgColor='#254BDF' animateOnRender={true} className='w-full md:w-3/4' />
-          </div>
-          <div className='flex flex-col items-center'>
-            <p className='w-full  text-center mb-4'>Javascript</p>
-            <ProgressBar completed={70} bgColor='#713F12' animateOnRender={true} className='w-full md:w-3/4' />
-          </div>
-          <div className='flex flex-col items-center'>
-          <p className='w-full  text-center mb-4'>React</p>
-            <ProgressBar completed={60} bgColor='#087A9F' animateOnRender={true} className='w-full md:w-3/4' />
-          </div>
-          <div className='flex flex-col items-center'>
-            <p className='w-full  text-center mb-4'>Tailwind CSS</p>
-            <ProgressBar completed={80} bgColor='#36B6F2' animateOnRender={true} className='w-full md:w-3/4' />
-          </div>
-          <div className='flex flex-col items-center'>
-            <p className='w-full  text-center mb-4'>Bootstrap 5</p>
-            <ProgressBar completed={76} bgColor='#5B397B' animateOnRender={true} className='w-full md:w-3/4' />
-          </div>
-          <div className='flex flex-col items-center'>
-            <p className='w-full  text-center mb-4'>GitHub</p>
-            <ProgressBar completed={82} bgColor='black' animateOnRender={true} className='w-full md:w-3/4' />
-          </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-xl'>
+          {[
+            { name: 'HTML5', level: 90, color: '#DD4B25' },
+            { name: 'CSS3', level: 75, color: '#254BDF' },
+            { name: 'JavaScript', level: 74, color: '#713F12' },
+            { name: 'React', level: 70, color: '#087A9F' },
+            { name: 'Tailwind CSS', level: 80, color: '#36B6F2' },
+            { name: 'Bootstrap 5', level: 76, color: '#5B397B' },
+            { name: 'GitHub', level: 82, color: 'black' }
+          ].map(skill => (
+            <div key={skill.name} className='flex flex-col items-center'>
+              <p className='w-full text-center mb-4'>{skill.name}</p>
+              <ProgressBar completed={skill.level} bgColor={skill.color} animateOnRender={true} className='w-full md:w-3/4' />
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Professional Skills Section */}
       <div className='flex flex-col w-full md:w-1/2 p-4'>
         <div className='flex justify-center mb-4'>
-          <h3 className='text-3xl font-bold  border-secondary border-b-4 w-[270px]'>Professional Skills</h3>
+          <h3 className='text-3xl font-bold border-secondary border-b-4 w-[270px]'>Professional Skills</h3>
         </div>
-        <div className='flex flex-col space-y-4 text-xl'>
-        <div className='flex flex-col items-center'>
-        <p className='w-full  text-center mb-4'>Projec Management</p>
-            <ProgressBar completed={85} bgColor='#4CAF50' animateOnRender={true} className='w-full md:w-3/4' />
-          </div>
-          <div className='flex flex-col items-center'>
-          <p className='w-full  text-center mb-4'>Team Work</p>
-            <ProgressBar completed={90} bgColor='#2196F3' animateOnRender={true} className='w-full md:w-3/4' />
-          </div>
-          <div className='flex flex-col items-center'>
-            <p className='w-full  text-center mb-4'>Communicatio</p>
-            <ProgressBar completed={95} bgColor='#FFC107' animateOnRender={true} className='w-full md:w-3/4' />
-          </div>
-          <div className='flex flex-col items-center'>
-            <p className='w-full  text-center mb-4'>Creativity</p>
-            <ProgressBar completed={80} bgColor='#9C27B0' animateOnRender={true} className='w-full md:w-3/4' />
-          </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-xl'>
+          {[
+            { name: 'Project Management', level: 85, color: '#E7D37F' },
+            { name: 'Team Work', level: 90, color: '#006989' },
+            { name: 'Communication', level: 92, color: '#FFAA80' },
+            { name: 'Creativity', level: 90, color: '#AF47D2' }
+          ].map(skill => (
+            <div key={skill.name} className='flex flex-col items-center h-[200px] w-full'>
+              <p className='w-full text-center mb-4'>{skill.name}</p>
+              <CircularProgressbar
+                value={skill.level}
+                text={`${skill.level}%`}
+                styles={buildStyles({
+                  textSize: '15px',
+                  pathColor: skill.color,
+                  textColor: '#fff'
+                })}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;

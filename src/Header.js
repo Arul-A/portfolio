@@ -1,37 +1,45 @@
-import React, { useState } from 'react'
-import { Bars3Icon } from '@heroicons/react/24/solid'
+import React, { useState } from 'react';
+import { Bars3Icon } from '@heroicons/react/24/solid';
 
 const Header = () => {
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false);
+
+    const handleToggle = () => {
+        setToggle(!toggle);
+    };
+
     return (
-        <header className='flex justify-between px-5 bg-primary font-bold py-2 sticky top-0 z-20'>
+        <header className='fixed top-0 left-0 w-full flex justify-between px-5 bg-primary font-bold py-2 z-20'>
             <a href='#home'>A.Arul</a>
             <nav className='hidden md:block'>
                 <ul className='flex text-white'>
-                    <li className='hover:bg-[#2b2d77]'><a href='#home'>Home</a></li>
-                    <li className='hover:bg-[#2b2d77]'><a href='#about'>About</a></li>
-                    <li className='hover:bg-[#2b2d77]'><a href='#skills'>Skills</a></li>
-                    <li className='hover:bg-[#2b2d77]'><a href='#experience'>Experience</a></li>
-                    <li className='hover:bg-[#2b2d77]'><a href='#projects'>Projects</a></li>
-                    <li className='hover:bg-[#2b2d77]'><a href='#resume'>Resume</a></li>
-                    <li className='hover:bg-[#2b2d77]'><a href='#contacts'>Contacts</a></li>
+                    {['home', 'about', 'skills', 'experience', 'projects', 'resume', 'contacts'].map((section) => (
+                        <li key={section} className='hover:bg-[#2b2d77]'>
+                            <a href={`#${section}`}>{section.charAt(0).toUpperCase() + section.slice(1)}</a>
+                        </li>
+                    ))}
                 </ul>
             </nav>
-            {toggle &&<nav className='block md:hidden '>
-                <ul onClick={()=>setToggle(!toggle)} className='flex flex-col text-white mobile-nav'>
-                    <li><a href='#home'>Home</a></li>
-                    <li><a href='#about'>About</a></li>
-                    <li><a href='#skills'>Skills</a></li>
-                    <li><a href='#experience'>Experience</a></li>
-                    <li><a href='#projects'>Projects</a></li>
-                    <li><a href='#resume'>Resume</a></li>
-                    <li><a href='#contacts'>Contacts</a></li>
-                </ul>
-            </nav>}
-            <button className='block md:hidden' onClick={()=>setToggle(!toggle)}><Bars3Icon className='text-white h-5'/></button>
-
+            {toggle && (
+                <nav className='block md:hidden'>
+                    <ul onClick={handleToggle} className='flex flex-col text-white mobile-nav'>
+                        {['home', 'about', 'skills', 'experience', 'projects', 'resume', 'contacts'].map((section) => (
+                            <li key={section}>
+                                <a href={`#${section}`}>{section.charAt(0).toUpperCase() + section.slice(1)}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            )}
+            <button
+                className='block md:hidden'
+                onClick={handleToggle}
+                aria-label='Toggle Navigation'
+            >
+                <Bars3Icon className='text-white h-5' />
+            </button>
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
-import contactImg from './assets/contact.jpg';
+// import contactImg from './assets/contact.png';
 import emailjs from '@emailjs/browser';
+import contact from './assets/contact.json'
+import Lottie from 'lottie-react';
 
 const Contacts = () => {
   const form = useRef();
@@ -78,7 +80,8 @@ const Contacts = () => {
           )}
         </div>
         <div className='w-full md:w-1/2 flex items-center justify-center'>
-          <img src={contactImg} alt='Contact' className='w-full' />
+          {/* <img src={contactImg} alt='Contact' className='w-full' /> */}
+          <Lottie loop={true} animationData={contact} />
         </div>
       </div>
     </section>

@@ -1,11 +1,13 @@
 import React from 'react'
-import AboutImg from './assets/about.png'
+// import AboutImg from './assets/about.png'
+import Lottie from 'lottie-react';
+import about from './assets/About1.json'
 
 const About = () => {
     return (
         <section id='about' className='flex flex-col md:flex-row bg-secondary px-5 text-white py-10'>
-            <div className='md:w-1/2 pb-5'>
-                <img src={AboutImg} alt=''/>
+            <div className='md:w-1/2'>
+                <Lottie loop={true} animationData={about} className='pb-5'/>
             </div>
             <div className='md:w-1/2 flex flex-col justify-center'>
                 <div className='flex flex-col justify-center mb-3' >

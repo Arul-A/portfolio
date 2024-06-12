@@ -28,15 +28,6 @@ header ul li{
 html{
   scroll-behavior: smooth;
 }
-.CircularProgressbar-path {
-  stroke: red;
-}
-.CircularProgressbar-trail {
-  stroke: gray;
-}
-.CircularProgressbar-text {
-  fill: yellow;
-}
-.CircularProgressbar-background {
-  fill: green;
+.scroll{
+  @apply bg-secondary px-5 py-2 font-bold rounded border-2 border-primary hover:border-white
 }
