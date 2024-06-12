@@ -1,6 +1,6 @@
 import React from 'react';
 // import resumeImg from './assets/resume-image.jpg'
-import resume from './assets/Resume.pdf';
+import resume from './assets/resume.pdf';
 import Lottie from 'lottie-react';
 import resumeLottie from './assets/resume-animation.json';
 
