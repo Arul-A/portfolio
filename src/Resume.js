@@ -1,8 +1,8 @@
 import React from 'react';
-// import resumeImg from './assets/resume.jpg'
+// import resumeImg from './assets/resume-image.jpg'
 import resume from './assets/Resume.pdf';
 import Lottie from 'lottie-react';
-import resumeLottie from './assets/resume.json';
+import resumeLottie from './assets/resume-animation.json';
 
 export const Resume = () => {
   return (
