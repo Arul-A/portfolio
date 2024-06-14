@@ -70,12 +70,12 @@ const Project = () => {
             <div className='project-desc p-5'>
               <p className='text-center py-5'>{project.description}</p>
               <p className='mb-3 border-b-2 border-primary w-[140px] mx-auto text-center'>Technologies used:</p>
-              <ul className='list-disc ms-44'>
+              <ul className='list-disc flex flex-col items-center'>
                 {project.technologies.map((tech, i) => (
                   <li key={i}>{tech}</li>
                 ))}
               </ul>
-              <div className='flex justify-center mt-5'>
+              <div className='flex justify-center mt-5 px-5'>
                 <a className='btn' target='_blank' href={project.link} rel='noreferrer'>View project</a>
               </div>
             </div>
