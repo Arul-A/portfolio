@@ -1,6 +1,6 @@
 import React from 'react';
 // import resumeImg from './assets/resume-image.jpg'
-import resume from './assets/resume.pdf';
+import resume from './assets/Arul web developer.pdf';
 import Lottie from 'lottie-react';
 import resumeLottie from './assets/resume-animation.json';
 
@@ -14,7 +14,7 @@ export const Resume = () => {
       <div className='md:w-1/2 px-10 md:px-20 pb-10 flex flex-col items-center md:items-start'>
         <h1 className='text-4xl border-b-4 border-primary w-[130px] mb-4'>Resume</h1>
         <p className='text-center md:text-left mb-4'>Here you can view my resume.</p>
-        <a href={resume} download='Resume.pdf' type='button' className='btn'>
+        <a href={resume} download='Arul web developer.pdf' type='button' className='btn'>
           Download
         </a>
       </div>
