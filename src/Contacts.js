@@ -61,15 +61,15 @@ const Contacts = () => {
           <form ref={form} onSubmit={sendEmail} className='flex flex-col space-y-4 py-10'>
             <div className='flex flex-col'>
               <label htmlFor='name' className='text-xl'>Name</label>
-              <input type="text" id='name' name="user_name" className='p-2 rounded-md text-black required' />
+              <input type="text" id='name' name="user_name" className='p-2 rounded-md text-black' required/>
             </div>
             <div className='flex flex-col'>
               <label htmlFor='email' className='text-xl'>Email</label>
-              <input type="email" id='email' name="user_email" className='p-2 rounded-md text-black required' />
+              <input type="email" id='email' name="user_email" className='p-2 rounded-md text-black' required/>
             </div>
             <div className='flex flex-col'>
               <label htmlFor='message' className='text-xl'>Message</label>
-              <textarea id='message' name="message" className='p-2 rounded-md h-[130px] text-black required' />
+              <textarea id='message' name="message" className='p-2 rounded-md h-[130px] text-black' required />
             </div>
             <input type='submit' value='Send' className='bg-secondary text-white py-2 px-4 rounded-md cursor-pointer' />
           </form>
