@@ -1,18 +1,28 @@
 import React, { useState, useRef } from 'react';
 import trendify from './assets/Trendify1.png';
 import spices from './assets/Spices.png';
-import social from './assets/Social.png';
 import weather from './assets/Weather.png';
-import todo from './assets/todo.png'
-import greenplus from './assets/green.png'
+import todo from './assets/todo.png';
+import greenplus from './assets/green.png';
+import flipkart from './assets/flipkart.png';
+import netflix from './assets/netflix.png';
 
 const projects = [
   {
-    img: social,
-    alt: 'Social media snapshot',
-    description: 'Develop a React-based post website enabling users to add, delete, and edit posts, enhancing interactivity and user engagement.',
-    technologies: ['React JS', 'CSS', 'JSON place holder', 'Axios API','React Router'],
-    link: 'https://github.com/Arul-A/Social-media.git'
+    img: netflix,
+    alt: 'netflix snap',
+    description: 'A Netflix clone built with Vite, React, Tailwind CSS, Firebase, and Redux Toolkit, featuring dynamic content streaming and state management.',
+    technologies: ['ReactJs/Vite', 'Tailwind css', 'firebase','Redux-toolkit','TMDB API'],
+    link: 'https://github.com/Arul-A/netflix-firebaseauth.git',
+    host:'https://net-flix-firebase.netlify.app/'
+  },
+  {
+    img: flipkart,
+    alt: 'flipkart clone snap',
+    description: 'A Flipkart clone built with React, Tailwind CSS, and Redux Toolkit for state management, featuring login/logout functionality with Supabase, product pages, and an add-to-cart feature.',
+    technologies: ['React JS', 'Tailwind CSS', 'Redux-toolkit','Supabase'],
+    link: 'https://github.com/Arul-A/flipkart_clone_project.git',
+    host:'https://flip-kart-clone.netlify.app/'
   },
   {
     img: todo,
@@ -52,7 +62,7 @@ const projects = [
     description: 'A weather forecast application that provides real-time weather data and forecasts with a responsive and user-friendly interface.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Open Weather API'],
     link: 'https://github.com/Arul-A/Weather-App.git'
-  }
+  },
 ];
 
 const Project = () => {
