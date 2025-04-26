@@ -38,7 +38,7 @@ const WorkExperience = () => {
 
                     <h3 className='text-2xl mb-2 font-semibold'>Professional Experience</h3>
 
-                    <p className='text-lg mb-4'>Frontend Developer | TeleCMI Communication Pvt Ltd, Villupuram | Sep 2024 - Present</p>
+                    <p className='text-lg mb-4'>Frontend Developer | TeleCMI Technologies Pvt Ltd, Villupuram | Sep 2024 - Present</p>
                     <ul className='list-disc ml-5 mb-4'>
                         <li className='mb-2'>
                             Developed and maintained TeleCMI's website using HTML, Bootstrap, Vue.js, Tailwind CSS, and Express.js.

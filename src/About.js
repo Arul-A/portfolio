@@ -26,7 +26,7 @@ const About = () => {
                 <div className='flex flex-col justify-center mb-3'>
                     <h1 className='text-4xl border-b-4 border-primary mb-5 w-[170px] font-bold'>About Me</h1>
                     <p>Hi, I’m Arul, a passionate Front-End Developer with a strong foundation in building dynamic and responsive web applications.</p>
-                    <p className='pt-5'>Currently working at TeleCMI Communications Pvt Ltd, I specialize in creating seamless user experiences using React, Vue.js, Tailwind CSS, and Express.js.</p>
+                    <p className='pt-5'>Currently working at TeleCMI Technologies Pvt Ltd, I specialize in creating seamless user experiences using React, Vue.js, Tailwind CSS, and Express.js.</p>
                 </div>
                 <div className='flex flex-col justify-center'>
                     <h1 className='text-4xl border-b-4 border-primary mb-5 w-[220px] font-bold'>My Journey</h1>
