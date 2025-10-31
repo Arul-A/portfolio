@@ -1,13 +1,22 @@
 import React, { useState, useRef } from 'react';
 import trendify from './assets/Trendify1.png';
-import spices from './assets/Spices.png';
-import weather from './assets/Weather.png';
+// import spices from './assets/Spices.png';
+// import weather from './assets/Weather.png';
 import todo from './assets/todo.png';
 import greenplus from './assets/green.png';
 import flipkart from './assets/flipkart.png';
 import netflix from './assets/netflix.png';
+import quickchat from './assets/quickchat.png';
 
 const projects = [
+  {
+    img: quickchat,
+    alt: 'quickchat snap',
+    description: 'A real-time chat application built with React, Tailwind CSS, Express.js, and Socket.io, enabling users to join chat rooms and exchange messages instantly.',
+    technologies: ['ReactJs/Vite', 'Tailwind css', 'Express.js','Socket.io', 'JWT', 'MongoDB'],
+    link: 'https://github.com/Arul-A/mern-quickchat.git',
+    host:'https://mern-quickchat.vercel.app/login'
+  },
   {
     img: netflix,
     alt: 'netflix snap',
@@ -47,21 +56,6 @@ const projects = [
     technologies: ['HTML', 'CSS', 'JavaScript'],
     link: 'https://github.com/Arul-A/Trendify.git',
     host: 'https://trend-ify.netlify.app'
-  },
-  {
-    img: spices,
-    alt: 'Spices snapshot',
-    description: 'Spices website featuring a landing area, product listings, and a contact section.',
-    technologies: ['HTML', 'CSS', 'Bootstrap 5'],
-    link: 'https://github.com/Arul-A/Spice-hub.git',
-    host:'https://spices-hub.netlify.app'
-  },
-  {
-    img: weather,
-    alt: 'Weather App snapshot',
-    description: 'A weather forecast application that provides real-time weather data and forecasts with a responsive and user-friendly interface.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Open Weather API'],
-    link: 'https://github.com/Arul-A/Weather-App.git'
   },
 ];
 
